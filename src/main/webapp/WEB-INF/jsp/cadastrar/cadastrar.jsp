@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -72,7 +74,7 @@
 							</form>
 							<hr>
 							<div class="text-center">
-								<a class="small" href="login.html">Ja tem uma conta? Login!</a>
+								<a class="small" href="<c:url value="login"/>">Ja tem uma conta? Login!</a>
 							</div>
 						</div>
 					</div>
