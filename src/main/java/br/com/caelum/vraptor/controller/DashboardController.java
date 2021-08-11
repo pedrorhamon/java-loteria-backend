@@ -8,14 +8,17 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.dao.UsuarioDAO;
 import br.com.caelum.vraptor.model.Usuario;
 
 @Path("dashboard")
 @Controller
 public class DashboardController {
 	
+	
 	@Inject EntityManager em;
 	@Inject Result resul;
+	@Inject UsuarioDAO usuarioDAO;
 	
 	@Get("")
 	public void dashboard() {
@@ -24,7 +27,7 @@ public class DashboardController {
 	
 	@Post("salvaUsuario")
 	public void salvaUsuario(Usuario usuario) {
-		em.persist(usuario);
+		usuarioDAO.insertOrUpdate(usuario);
 		resul.redirectTo(DashboardController.class).dashboard();
 	}
 }
