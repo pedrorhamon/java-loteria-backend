@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -43,11 +43,22 @@
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">Cadastrar!</h1>
 							</div>
-							<form method="post" class="user" action="<c:url value="cadastrar/salvaUsuario"/>">
+
+							<c:if test="${not empty errors }">
+								<div class="alert alert-danger" role="alert">
+									<c:forEach var="error" items="${errors}">
+										 ${error.message}<br />
+									</c:forEach>
+								</div>
+							</c:if>
+
+							<form method="post" class="user"
+								action="<c:url value="cadastrar/salvaUsuario"/>">
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
-										<input name="usuario.nome" type="text" class="form-control form-control-user"
-											id="exampleFirstName" placeholder="Nome">
+										<input name="usuario.nome" type="text"
+											class="form-control form-control-user" id="exampleFirstName"
+											placeholder="Nome">
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
@@ -55,8 +66,9 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<input name="usuario.email" type="email" class="form-control form-control-user"
-										id="exampleInputEmail" placeholder="Email">
+									<input name="usuario.email" type="email"
+										class="form-control form-control-user" id="exampleInputEmail"
+										placeholder="Email">
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
@@ -64,18 +76,19 @@
 											id="exampleInputPassword" placeholder="Senha">
 									</div>
 									<div class="col-sm-6">
-										<input name="usuario.senha" type="password" class="form-control form-control-user"
+										<input name="usuario.senha" type="password"
+											class="form-control form-control-user"
 											id="exampleRepeatPassword" placeholder="Confirme a Senha">
 									</div>
 								</div>
 								<button type="submit" class="btn btn-primary btn-user btn-block">
-									Cadastrar 
-								</button>
+									Cadastrar</button>
 
 							</form>
 							<hr>
 							<div class="text-center">
-								<a class="small" href="<c:url value="login"/>">Ja tem uma conta? Login!</a>
+								<a class="small" href="<c:url value="login"/>">Ja tem uma
+									conta? Login!</a>
 							</div>
 						</div>
 					</div>

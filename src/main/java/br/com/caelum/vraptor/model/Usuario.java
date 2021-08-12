@@ -3,24 +3,23 @@ package br.com.caelum.vraptor.model;
 import javax.persistence.Entity;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Usuario extends Model{
 
-	@NotEmpty 
-	@Size(min = 4, max = 20)
+	@NotEmpty(message = "usuario.nome.embranco")
+	@Size(min = 4, max = 20, message="{usuario.nome.size}")
 	private String nome;
 	
-	@NotEmpty
-	@Email
+	@NotEmpty(message = "usuario.email.embranco")
+	@Size(min = 4, max = 20, message="{usuario.email.size}")
 	private String email;
 	
-	@NotEmpty
-	@Size(min = 4, max = 20)
+	@NotEmpty(message = "usuario.senha.embranco")
+	@Size(min = 4, max = 20, message = "{usuario.senha.size}")
 	private String senha;
-
+	
 	public String getNome() {
 		return nome;
 	}
