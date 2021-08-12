@@ -56,12 +56,12 @@
 								action="<c:url value="cadastrar/salvaUsuario"/>">
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
-										<input name="usuario.nome" type="text"
+										<input name="usuario.nome" minlength="3" maxlength="15"  type="text"
 											class="form-control form-control-user" id="exampleFirstName"
 											placeholder="Nome">
 									</div>
 									<div class="col-sm-6">
-										<input type="text" class="form-control form-control-user"
+										<input type="text" minlength="3" maxlength="15" class="form-control form-control-user"
 											id="exampleLastName" placeholder="Sobrenome">
 									</div>
 								</div>
@@ -72,11 +72,11 @@
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
-										<input type="password" class="form-control form-control-user"
+										<input type="password" minlength="6" maxlength="20" class="form-control form-control-user"
 											id="exampleInputPassword" placeholder="Senha">
 									</div>
 									<div class="col-sm-6">
-										<input name="usuario.senha" type="password"
+										<input name="usuario.senha" minlength="6" maxlength="20" type="password"
 											class="form-control form-control-user"
 											id="exampleRepeatPassword" placeholder="Confirme a Senha">
 									</div>
