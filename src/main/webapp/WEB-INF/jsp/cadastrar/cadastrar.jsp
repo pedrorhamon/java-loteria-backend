@@ -76,7 +76,7 @@
 											id="exampleInputPassword" placeholder="Senha">
 									</div>
 									<div class="col-sm-6">
-										<input name="usuario.senha" minlength="6" maxlength="20" type="password"
+										<input name="confirmaSenha" minlength="6" maxlength="20" type="password"
 											class="form-control form-control-user"
 											id="exampleRepeatPassword" placeholder="Confirme a Senha">
 									</div>
