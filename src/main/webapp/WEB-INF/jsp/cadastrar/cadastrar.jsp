@@ -55,28 +55,24 @@
 							<form method="post" class="user"
 								action="<c:url value="cadastrar/salvaUsuario"/>">
 								<div class="form-group row">
-									<div class="col-sm-6 mb-3 mb-sm-0">
-										<input name="usuario.nome" minlength="3" maxlength="15"  type="text"
+									<div class="col-sm-12 mb-3 mb-sm-0">
+										<input name="usuario.nome" value="#{usuario.nome}" minlength="3" maxlength="15"  type="text"
 											class="form-control form-control-user" id="exampleFirstName"
 											placeholder="Nome">
 									</div>
-									<div class="col-sm-6">
-										<input type="text" minlength="3" maxlength="15" class="form-control form-control-user"
-											id="exampleLastName" placeholder="Sobrenome">
-									</div>
 								</div>
 								<div class="form-group">
-									<input name="usuario.email" type="email"
+									<input name="usuario.email" type="email" value="#{usuario.email}"
 										class="form-control form-control-user" id="exampleInputEmail"
 										placeholder="Email">
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
-										<input type="password" minlength="6" maxlength="20" class="form-control form-control-user"
+										<input type="password" value="#{usuario.senha}" minlength="6" maxlength="20" class="form-control form-control-user"
 											id="exampleInputPassword" placeholder="Senha">
 									</div>
 									<div class="col-sm-6">
-										<input name="confirmaSenha" minlength="6" maxlength="20" type="password"
+										<input name="confirmaSenha" value="#{confirmaSenha}" minlength="6" maxlength="20" type="password"
 											class="form-control form-control-user"
 											id="exampleRepeatPassword" placeholder="Confirme a Senha">
 									</div>
