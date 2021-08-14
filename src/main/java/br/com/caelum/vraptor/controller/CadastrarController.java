@@ -24,8 +24,7 @@ public class CadastrarController {
 	@Inject Validator validator;
 	
 	@Get("")
-	public void cadastrar() {
-		
+	public void cadastrar() {	
 	}
 	
 	@Post("salvaUsuario")
