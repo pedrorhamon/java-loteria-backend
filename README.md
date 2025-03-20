@@ -1,1 +1,2 @@
 # loteria
+java 11
